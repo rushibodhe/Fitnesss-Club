@@ -1,0 +1,6 @@
+General notes:
+>> When to use {} and when to export directly?
+The curly braces are used only for import when export is named. If the export is default then curly braces are not used for import.
+
+Navbar.js:
+>> You can use stack component of material ui to create the navbar.

@@ -1,0 +1,51 @@
+>> Initial setup and folder structure:
+1. Installed material ui and icon, react router dom.
+2. deleted src folder.
+3. deleted App.css and added it from youtuber's github.
+4. created components folder and created footer and navbar components in it.
+5. created pages folder and added exerciseDetail and home in it.
+6. created routers in the App.js folder and imported all components in it.
+7. inside index.js added app component inside BrowserRouter.
+8. added asset folder from youtuber's github.
+
+
+>> Navbar component:
+1. Started working with navbar.
+2. added nested stack and link also added some styling to it.
+
+
+>> Home component:
+1. Added box component of mui.
+2. Imported 3 components HeroBanner, SearchExercises, Exercises.
+3. Created those 3 components.
+
+
+>> HeroBanner:
+1. Added Box, Stack and Typography from mui and added style to it.
+2. Added Button and styled it.
+3. Added img and styled it. (Most Imp added position relative property then only we can see the image)
+4. Then added Typography before image with opacity 0.1 so that we can see the exercises written in less opacity.
+
+
+>> SearchExercises:
+1. Add Stack, typography, box, textfield, button and styled it.
+2. Added useState, useEffect and managing the state of textfield.
+3. Created utility function fetchData for fetching the data from rapid api and stored the api key in .env file.
+4. Created handleSearch function inside which we fetched all exercises and filtered the exercises as per what we search.
+5. Then cleared the search bar by setting its state as a empty state and stored those searched exercises in a exercise state.
+
+
+>> Horizontal scroll bar component: (item = data = bodyParts)
+1. Then to display the horizontal scroll bar passed the component below the search button inside box.
+2. Then by using useEffect hook fetched the bodyparts and set thaose list of body parts as a state in useState.
+3. Then passed those bodyparts as a props to the horizontal scroll bar component.
+4. Then using map we mapped all bodyParts inside a new component (BodyPart) which is rendered inside the Box and also passed bodyPart, bodyParts('item' named prop inside map) and setBodyPart props to <BodyPart/> component. ie we seperated the BodyPart from BodyParts into BodyPart named component.
+5. And BodyPart and setBodyPart will be created in Home.js page and from there it will be passed to SearchExercise component. (Also deleted the setExercises and exercises from the SearchExercises component because now it has been moved to the Home.js page).
+6. Also added bodyPart and setBodyPart states into the Home.js page.
+7. We took the bodyPart, setBodypart, exercises, setExercise to the Home.js page from SearchExercises component becuase we need this things across all the time and not only in the SearchExercises component.  
+
+
+>> BodyPart:
+1. Imported stack from mui and props from HorizontalScrollBar.
+2. Also imported icon from the assets.
+3. Also added conditional styling to the bodyParts card.
